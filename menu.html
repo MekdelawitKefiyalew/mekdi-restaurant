@@ -62,10 +62,24 @@ button{
     box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     text-decoration: none;
     float: right;
+
+}
+/* Initial state for all dishes */
+.menu {
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+    transition: all 0.8s ease;
+}
+
+/* When visible on scroll */
+.menu.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
 }
  </style>
    <h1>Our Menu</h1>
    <h2> Ethiopian traditional food</h2>
+   <div class="menu-container">
    <div class="menu">
     <img src="doro.jpg" alt="doro wat" width="300" height="200">
     <p>Doro Wat: A rich, slow-cooked chicken stew infused with spicy berbere, served with a hard-boiled egg. It’s the ultimate Ethiopian comfort food, deep in color and complex in flavor.</p>
@@ -146,7 +160,29 @@ button{
 <img src="Wagyu Teppanyaki.jpg" alt="Wagyu Teppanyaki" width="300" height="200">
 <p>Wagyu Teppanyaki: Premium, highly marbled Japanese beef seared on an iron griddle to buttery perfection, served with seasonal vegetables and sea salt.</p>
 </div>
+</div>
 <button><a href="index.html">Home</a></button>
 <button><a href="sweet.html">Sweet and drink section</a></button>
+<script>
+const menus = document.querySelectorAll('.menu');
+
+function revealMenus() {
+    const triggerBottom = window.innerHeight * 0.85;
+
+    menus.forEach(menu => {
+        const menuTop = menu.getBoundingClientRect().top;
+
+        if(menuTop < triggerBottom){
+            menu.classList.add('show');
+        }
+    });
+}
+
+// Trigger on scroll
+window.addEventListener('scroll', revealMenus);
+
+// Trigger on load for visible items
+revealMenus();
+</script>
 </body>
 </html>
