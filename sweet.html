@@ -60,6 +60,18 @@
             
             
         }
+/* Initial state for all dishes */
+.menu {
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+    transition: all 0.8s ease;
+}
+
+/* When visible on scroll */
+.menu.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
     </style>
    <h1>our sweet options</h1>
    <h2>Desert options</h2>
@@ -104,5 +116,26 @@
 </div>
  <button><a href="index.html">Home</a></button>  
   <button><a href="menu.html">Back</a></button>  
+  <script>
+const menus = document.querySelectorAll('.menu');
+
+function revealMenus() {
+    const triggerBottom = window.innerHeight * 0.85;
+
+    menus.forEach(menu => {
+        const menuTop = menu.getBoundingClientRect().top;
+
+        if(menuTop < triggerBottom){
+            menu.classList.add('show');
+        }
+    });
+}
+
+// Trigger on scroll
+window.addEventListener('scroll', revealMenus);
+
+// Trigger on load for visible items
+revealMenus();
+</script>
 </body>
 </html>
