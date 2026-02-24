@@ -1,0 +1,138 @@
+h1{
+    font-size:100px;
+    font-display: block;
+    font-style: italic;
+    font-weight: 300;
+    text-align: center;
+    text-shadow: 0cap;
+    color:darkmagenta;
+    text-shadow: black;
+   
+}
+p{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.head{
+background-color: rgb(241, 240, 240);
+background-image: -moz-linear-gradient();
+
+}
+.navbar{
+    text-align: right;
+    padding: 10px;}
+.navbar a{
+    text-decoration: none;
+    margin: 20px;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    text-align: right;
+}
+.welcom{
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+p{
+    font-size:15px ;
+    float: center;
+    color: black;
+  font-style: initial;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    background-image: radial-gradient(rgb(46, 2, 25), white);
+    background-blend-mode: color-burn;
+    background-image: -moz-linear-gradient();
+   
+}
+h2{
+    text-align: center;
+    font-style: initial;
+    text-emphasis-color: inherit;
+    animation: forwards;
+}
+.list{
+    padding-inline-start: 30px;
+    background-color: rgb(249, 250, 251);
+    background-image: -o-linear-gradient();
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 20px;
+
+
+
+}
+h3{
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.invite{
+    background-image: linear-gradient(white);
+    text-align: center;
+    font-size: 100px;
+    padding:20px ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.button-container{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Base Button Style */
+.btn {
+    align-items: center;
+    padding: 12px 50px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    text-decoration: none;
+}
+
+/* Button 1 */
+.btn1 {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/*/* Button 2 */
+.btn2 {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+}
+
+.btn2:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+/* Button 3 */
+.btn3 {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+}
+
+.btn3:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+footer{
+    text-align: center;
+    color: rgb(247, 247, 243);
+}
