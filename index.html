@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="style.css">
+  <div class="logo">
+    <div class="logo-icon">M</div>
+    <div class="logo-text">
+        <span class="luxury">ekdi</span> Restaurant
+    </div>
+</div>
 </head>
 <body>
     <div class="navbar">
@@ -17,11 +23,10 @@
 
 
     </div>
-    <div class="head" >
-        <h1>Mekdi Restaurant</h1>
-       
-    
-    </div>
+    <h1 class="head">Mekdi Restaurant</h1>
+    <p class="tagline">Where Every Meal is an Experience</p>
+</div>
+
 <div class="welcome">
     <p> Welcome to a mekdi restaurant. we are a very delighted to 
         give you the best experience you ever had in a restaurant.
@@ -42,20 +47,24 @@
 <image src="pic7.jpg" alt="restaurant" length="250" width="300"></image>
 <image src="pic8.jpg" alt="restaurant" length="250" width="300"></image>
 
-<div class="list">
-<h1>our cusienes to enjoy</h1>
-<H2>traditional and very modern cusines</H2>
-<H2>
-Ethiopian traditional food<br><br>
-Indian food<br><br>
-Italian food<br><br>
-chinese food<br><br>
-Turkish<br><br>
-japanise<br><br>
-sweet bekery<br><br>
-Cold drink<br><br>
-Hot Drinks</H2>
-</div>
+<section class="luxury-cuisine">
+    <h1 class="luxury-title">Our Cuisines</h1>
+    <p class="luxury-subtitle">A Fine Dining Experience Across Cultures</p>
+
+    <div class="cuisine-list">
+
+        <div class="luxury-card">Ethiopian Traditional Cuisine</div>
+        <div class="luxury-card">Indian Fine Flavors</div>
+        <div class="luxury-card">Authentic Italian Dishes</div>
+        <div class="luxury-card">Premium Chinese Selections</div>
+        <div class="luxury-card">Turkish Specialties</div>
+        <div class="luxury-card">Japanese Delicacies</div>
+        <div class="luxury-card">Artisan Sweet Bakery</div>
+        <div class="luxury-card">Signature Cold Drinks</div>
+        <div class="luxury-card">Gourmet Hot Drinks</div>
+
+    </div>
+</section>
 
 <div class="chefs">
     <div class="chef-head">
@@ -76,6 +85,30 @@ Hot Drinks</H2>
     <button class="btn btn3"><a href="about.html">About Us</a></button>
     <button class="btn btn3"><a href="contact.html">Contact Us</a></button>
 </div>
+<script>
+const cards = document.querySelectorAll(".luxury-card");
 
+function revealOnScroll() {
+    const triggerBottom = window.innerHeight * 0.85;
+
+    cards.forEach(card => {
+        const cardTop = card.getBoundingClientRect().top;
+
+        if (cardTop < triggerBottom) {
+            card.classList.add("show");
+
+            setTimeout(() => {
+                card.classList.add("settle");
+            }, 400);
+        }
+    });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
+
+
+
+</script>
 </body>
 </html>
